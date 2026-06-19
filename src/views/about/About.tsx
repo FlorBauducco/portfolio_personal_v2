@@ -5,7 +5,7 @@ import {
 } from "../../components/custom/CustomSection";
 import { aboutCards } from "../../data/about.data";
 import { cn } from "../../utils/utils";
-import { accentIcon, accentRing } from "./lib/Index";
+import { accentIcon, accentRing } from "../../utils/lib/Index";
 
 export const About = () => {
   return (
