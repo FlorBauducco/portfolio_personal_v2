@@ -29,7 +29,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 exit={{ opacity: 0 }}
               />
 
-              {/* Modal */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -37,7 +36,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-linear-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 md:p-8"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Close Button */}
                 <motion.button
                   className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors cursor-pointer"
                   whileHover={{ scale: 1.1 }}
@@ -47,9 +45,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <X size={24} />
                 </motion.button>
 
-                {/* Content */}
                 <div className="space-y-6">
-                  {/* Title & Year */}
                   <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                       {project.title}
@@ -63,12 +59,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </div>
                   </div>
 
-                  {/* Description */}
                   <p className="text-gray-300 text-lg leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div>
                     <h3 className="text-white font-semibold mb-3">
                       Technologies
@@ -85,7 +79,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </div>
                   </div>
 
-                  {/* Challenges */}
                   <div>
                     <h3 className="text-white font-semibold mb-3">
                       Challenges
@@ -103,7 +96,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </ul>
                   </div>
 
-                  {/* Solutions */}
                   <div>
                     <h3 className="text-white font-semibold mb-3">Solutions</h3>
                     <ul className="space-y-2">
@@ -119,7 +111,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </ul>
                   </div>
 
-                  {/* Achievements */}
                   <div>
                     <h3 className="text-white font-semibold mb-3">Learnings</h3>
                     <ul className="space-y-2">
@@ -135,7 +126,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </ul>
                   </div>
 
-                  {/* Links */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
                     <motion.a
                       href={project.liveUrl}
