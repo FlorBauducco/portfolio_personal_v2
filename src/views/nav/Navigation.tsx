@@ -1,26 +1,21 @@
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Icons from "lucide-react";
 import { navigationData } from "../../data/navigation.data";
+import { useScroll } from "../../hooks/useScroll";
+import { useState } from "react";
+import { scrollToSection } from "../../utils/utils";
 
-export const Navigation = ({
-  activeSection,
-  onNavigate,
-}: {
-  activeSection: string;
-  onNavigate: (id: string) => void;
-}) => {
+const ids = navigationData.map((n) => n.id);
+
+export const Navigation = () => {
+  const active = useScroll(ids);
+  const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const go = (id: string) => {
+    scrollToSection(id);
+    setOpen(false);
+  };
 
   return (
     <motion.nav
@@ -41,12 +36,12 @@ export const Navigation = ({
               const Icon = Icons[
                 item.icon as keyof typeof Icons
               ] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
-              const isActive = activeSection === item.id;
+              const isActive = active === item.id;
 
               return (
                 <motion.button
                   key={item.id}
-                  onClick={() => onNavigate(item.id)}
+                  onClick={() => go(item.id)}
                   className={`relative p-2 rounded-lg transition-colors flex justify-center items-center gap-1 cursor-pointer ${
                     isActive ? "text-white" : "text-gray-400 hover:text-white"
                   }`}
@@ -75,7 +70,8 @@ export const Navigation = ({
           {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden text-white"
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
             whileTap={{ scale: 0.95 }}
           >
             <Icons.Menu size={24} />
@@ -84,7 +80,7 @@ export const Navigation = ({
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isMobileOpen && (
+          {open && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -96,15 +92,12 @@ export const Navigation = ({
                   const Icon = Icons[
                     item.icon as keyof typeof Icons
                   ] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
-                  const isActive = activeSection === item.id;
+                  const isActive = active === item.id;
 
                   return (
                     <motion.button
                       key={item.id}
-                      onClick={() => {
-                        onNavigate(item.id);
-                        setIsMobileOpen(false);
-                      }}
+                      onClick={() => go(item.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-colors ${
                         isActive
                           ? "bg-linear-to-r from-indigo-500/20 to-purple-500/20 text-white"
