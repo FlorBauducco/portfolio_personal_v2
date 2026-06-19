@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { CustomDynamicBackground } from "./components/custom/CustomDynamicBackground";
 import { Navigation } from "./views/nav/Navigation";
 import { Hero } from "./views/hero/Hero";
+import { About } from "./views/about/About";
 
 function PortfolioApp() {
   const [activeSection, setActiveSection] = useState("home");
@@ -44,6 +45,7 @@ function PortfolioApp() {
             onNavigate={handleNavigate}
           />
           <Hero />
+          <About />
         </div>
       </div>
     </>
