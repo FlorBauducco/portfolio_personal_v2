@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { CustomDynamicBackground } from "./components/custom/CustomDynamicBackground";
 import { Navigation } from "./views/nav/Navigation";
-
+import { Hero } from "./views/hero/Hero";
 
 function PortfolioApp() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = sectionRefs.current[sectionId];
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -29,8 +29,8 @@ function PortfolioApp() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -39,11 +39,15 @@ function PortfolioApp() {
         <CustomDynamicBackground />
 
         <div className="relative z-10">
-        <Navigation activeSection={activeSection} onNavigate={handleNavigate} />
+          <Navigation
+            activeSection={activeSection}
+            onNavigate={handleNavigate}
+          />
+          <Hero />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default PortfolioApp
+export default PortfolioApp;
