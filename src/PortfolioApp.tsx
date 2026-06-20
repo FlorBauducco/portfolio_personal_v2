@@ -5,6 +5,7 @@ import { About } from "./views/about/About";
 import { Skills } from "./views/skills/Skills";
 import { Projects } from "./views/projects/Projects";
 import { Experience } from "./views/experience/Experience";
+import { Education } from "./views/education/Education";
 
 function PortfolioApp() {
   return (
@@ -19,6 +20,7 @@ function PortfolioApp() {
           <Skills />
           <Projects />
           <Experience />
+          <Education />
         </div>
       </div>
     </>

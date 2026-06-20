@@ -10,7 +10,7 @@ const ids = navigationData.map((n) => n.id);
 export const Navigation = () => {
   const active = useScroll(ids);
   const [open, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled] = useState(false);
 
   const go = (id: string) => {
     scrollToSection(id);
@@ -30,7 +30,6 @@ export const Navigation = () => {
     >
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-20">
-          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-3">
             {navigationData.map((item) => {
               const Icon = Icons[
