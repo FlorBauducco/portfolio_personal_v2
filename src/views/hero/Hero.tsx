@@ -13,12 +13,13 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.3 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="relative mb-8"
         >
-          <div className="relative h-28 w-28 overflow-hidden rounded-full border border-border glow-violet sm:h-32 sm:w-32">
+          <div className="relative h-28 w-28 overflow-hidden rounded-full border border-border glow-violet sm:h-42 sm:w-42 ">
             <img
-              src="/avatar.png"
+              src="/avatar5.png"
               alt="Portrait of Florencia Bauducco"
               sizes="128px"
               className="object-cover"
