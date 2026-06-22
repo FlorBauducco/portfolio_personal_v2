@@ -51,6 +51,31 @@ export const About = () => {
                 <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
                   {card.body}
                 </p>
+
+                {card.id === "who" && (
+                  <div className="relative mt-auto overflow-hidden rounded-xl min-h-80">
+                    <img
+                      src="/image/mundi.png"
+                      alt="Madrid map"
+                      className="absolute inset-0 h-full w-full object-cover opacity-20"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
+
+                    <div className="absolute left-1/2 top-0 h-75 w-px bg-violet-500/40" />
+
+                    <div className="absolute bottom-5 left-5 z-10">
+                      <p className="text-xs font-medium uppercase tracking-widest text-violet-400">
+                        Based in
+                      </p>
+                      <h4 className="text-lg font-bold tracking-tight text-white">
+                        Madrid, Spain
+                      </h4>
+                      <p className="text-xs text-white/60">
+                        40.4168° N · 3.7038° W · UTC+2
+                      </p>
+                    </div>
+                  </div>
+                )}
               </motion.article>
             );
           })}
