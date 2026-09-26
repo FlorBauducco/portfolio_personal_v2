@@ -2,6 +2,28 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Cómo trabajar conmigo
+
+- Responde siempre en español.
+- Soy desarrolladora junior (DAM) y estoy aprendiendo.
+- Antes de cambiar código, explícame el plan en pasos simples
+  y espera mi confirmación.
+- Explica cada cambio: qué archivo tocas y por qué.
+- Haz cambios pequeños, de una tarea cada vez.
+- No instales dependencias nuevas sin preguntarme.
+- Trabaja siempre en una rama, nunca directamente en main.
+- Al terminar cada cambio, ejecuta `pnpm lint` y `pnpm build`
+  para comprobar que no hay errores.
+
+## Objetivo del proyecto
+
+Portfolio para conseguir mi primer empleo como desarrolladora.
+
+- Prioridad: proyectos > experiencia.
+- Altivia Tattoo (https://altiviatattoo.es/) es el proyecto profesional destacado.
+- Separar proyectos profesionales de proyectos de formación.
+- Experiencia: solo puesto, empresa y fechas; nada de listas de tareas.
+
 ## Commands
 
 Package manager: **pnpm** (see `pnpm-lock.yaml`).
@@ -42,30 +64,17 @@ Hooks in `src/hooks/`:
 
 `src/utils/utils.ts` exports `cn(...)` (clsx + tailwind-merge) and `scrollToSection(id)`, used by the nav to jump between section anchors.
 
+### Styling: Tailwind v4
+
+There is no `tailwind.config.js` — Tailwind v4 is wired via `@tailwindcss/vite` and the design tokens live in `src/index.css` inside a `@theme inline` block (fonts, colors like `--color-primary`, `--color-violet`, etc.). To add or tweak tokens, edit `src/index.css`, not a JS config file.
+
+### Linting
+
+ESLint uses flat config in `eslint.config.js` with `typescript-eslint`, `eslint-plugin-react-hooks` and `eslint-plugin-react-refresh`. Adjust rules there.
+
 ### Conventions
 
 - Component files use PascalCase; the `Custom*` prefix marks shared/reusable pieces vs. section-scoped views.
 - Section anchors: each view renders under an id that matches entries in `navigation.data.ts` — keep these in sync when renaming sections.
 - Styling: Tailwind utility classes; combine with `cn()` when composing conditional class strings.
-
-## Cómo trabajar conmigo
-
-- Responde siempre en español.
-- Soy desarrolladora junior (DAM) y estoy aprendiendo.
-- Antes de cambiar código, explícame el plan en pasos simples
-  y espera mi confirmación.
-- Explica cada cambio: qué archivo tocas y por qué.
-- Haz cambios pequeños, de una tarea cada vez.
-- No instales dependencias nuevas sin preguntarme.
-- Trabaja siempre en una rama, nunca directamente en main.
-- Al terminar cada cambio, ejecuta `pnpm lint` y `pnpm build`
-  para comprobar que no hay errores.
-
-## Objetivo del proyecto
-
-Portfolio para conseguir mi primer empleo como desarrolladora.
-
-- Prioridad: proyectos > experiencia.
-- Altivia Tattoo (https://altiviatattoo.es/) es el proyecto profesional destacado.
-- Separar proyectos profesionales de proyectos de formación.
-- Experiencia: solo puesto, empresa y fechas; nada de listas de tareas.
+- Static assets served as-is (favicon, CV pdf, etc.) go in `public/`; assets imported by components live under `src/`.
