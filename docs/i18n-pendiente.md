@@ -20,7 +20,7 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `src/components/custom/CustomOpenToWorkBadge.tsx` | "Open to Work" (usado en Hero y Contact) |
 | `src/utils/utils.ts` | "Present" en `formatPeriod` (es: "Actualidad") |
 | `src/views/nav/Navigation.tsx` | `aria-label` del botón de menú: "Open menu" / "Close menu" |
-| `index.html` | `lang="en"` y `<title>` (hacer `lang` dinámico según idioma) |
+| `index.html` | `<title>` (el `lang` ya se actualiza desde `src/i18n/index.ts`) |
 
 Nota: todo el contenido actual está en inglés; hay que escribir la versión en español.
 
