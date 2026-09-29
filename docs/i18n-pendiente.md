@@ -15,9 +15,9 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `src/views/projects/ProjectModal.tsx` | "N Technologies" (plural), "Technologies", "Challenges", "Solutions", "Learnings", "View Project", "View Code" |
 | `src/views/experience/Experience.tsx` | Cabecera (eyebrow / title / description) |
 | `src/views/education/Education.tsx` | Cabecera; etiqueta del tipo: `{item.type}` → `t(\`education.types.${item.type}\`)` (ver tabla abajo) |
-| `src/views/contact/Contact.tsx` | "Open to Work", "Ready to Build and Learn", párrafo de presentación, "Download CV", footer "Designed & built by…" |
+| `src/views/contact/Contact.tsx` | "Ready to Build and Learn", párrafo de presentación, "Download CV", footer "Designed & built by…" |
 | `src/data/contact.data.ts` | label "Email" del array `socials` |
-| `src/components/custom/CustomAnimatedButton.tsx` | "Open to Work" |
+| `src/components/custom/CustomOpenToWorkBadge.tsx` | "Open to Work" (usado en Hero y Contact) |
 | `src/utils/utils.ts` | "Present" en `formatPeriod` (es: "Actualidad") |
 | `src/views/nav/Navigation.tsx` | `aria-label` del botón de menú: "Open menu" / "Close menu" |
 | `index.html` | `lang="en"` y `<title>` (hacer `lang` dinámico según idioma) |

@@ -2,6 +2,7 @@ import { Download, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { CustomSection } from "../../components/custom/CustomSection";
 import { CustomReveal } from "../../components/custom/CustomReveal";
+import { CustomOpenToWorkBadge } from "../../components/custom/CustomOpenToWorkBadge";
 import { socials } from "../../data/contact.data";
 
 export function Contact() {
@@ -11,13 +12,7 @@ export function Contact() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.62_0.2_290/0.18),transparent_60%)]" />
         <div className="relative">
           <CustomReveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet/30 bg-violet/10 px-4 py-1.5 text-sm font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-              </span>
-              Open to Work
-            </span>
+            <CustomOpenToWorkBadge />
           </CustomReveal>
 
           <CustomReveal index={1}>

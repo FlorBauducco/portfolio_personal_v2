@@ -54,7 +54,7 @@ Reusable primitives live in `src/components/custom/`:
 
 - `CustomSection` — standard section wrapper (padding, id anchor for nav scrolling).
 - `CustomReveal` — scroll-triggered reveal animation used across sections.
-- `CustomAnimatedButton` — shared button styling/motion.
+- `CustomOpenToWorkBadge` — "Open to Work" badge used in Hero and Contact.
 - `CustomDynamicBackground` — the app-wide background layer.
 
 Hooks in `src/hooks/`:

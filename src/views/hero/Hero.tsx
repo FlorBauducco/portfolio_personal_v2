@@ -1,6 +1,6 @@
 import { FolderGit2, Mail, MapPin, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { CustomAnimatedButton } from "../../components/custom/CustomAnimatedButton";
+import { CustomOpenToWorkBadge } from "../../components/custom/CustomOpenToWorkBadge";
 import { scrollToSection } from "../../utils/utils";
 
 export const Hero = () => {
@@ -25,7 +25,13 @@ export const Hero = () => {
         </div>
       </motion.div>
 
-      <CustomAnimatedButton />
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <CustomOpenToWorkBadge />
+      </motion.div>
 
       <motion.p
         initial={{ opacity: 0, y: 12 }}
