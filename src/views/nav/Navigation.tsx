@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import * as Icons from "lucide-react";
+import { Menu } from "lucide-react";
 import { navigationData } from "../../data/navigation.data";
 import { useScroll } from "../../hooks/useScroll";
 import { useHideOnScroll } from "../../hooks/useHideOnScroll";
@@ -30,9 +30,7 @@ export const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end md:justify-center h-16 md:h-20">
           <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-3">
             {navigationData.map((item) => {
-              const Icon = Icons[
-                item.icon as keyof typeof Icons
-              ] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+              const Icon = item.icon;
               const isActive = active === item.id;
 
               return (
@@ -73,7 +71,7 @@ export const Navigation = () => {
             aria-label={open ? "Close menu" : "Open menu"}
             whileTap={{ scale: 0.95 }}
           >
-            <Icons.Menu size={24} />
+            <Menu size={24} />
           </motion.button>
         </div>
 
@@ -89,9 +87,7 @@ export const Navigation = () => {
             >
               <div className="px-4 py-4 space-y-2">
                 {navigationData.map((item) => {
-                  const Icon = Icons[
-                    item.icon as keyof typeof Icons
-                  ] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+                  const Icon = item.icon;
                   const isActive = active === item.id;
 
                   return (
