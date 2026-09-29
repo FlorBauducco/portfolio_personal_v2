@@ -18,6 +18,7 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `src/views/contact/Contact.tsx` | "Open to Work", "Ready to Build and Learn", párrafo de presentación, "Download CV", footer "Designed & built by…" |
 | `src/data/contact.data.ts` | label "Email" del array `socials` |
 | `src/components/custom/CustomAnimatedButton.tsx` | "Open to Work" |
+| `src/utils/utils.ts` | "Present" en `formatPeriod` (es: "Actualidad") |
 | `src/views/nav/Navigation.tsx` | `aria-label` del botón de menú: "Open menu" / "Close menu" |
 | `index.html` | `lang="en"` y `<title>` (hacer `lang` dinámico según idioma) |
 

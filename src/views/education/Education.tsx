@@ -5,6 +5,7 @@ import {
   CustomSectionHeading,
 } from "../../components/custom/CustomSection";
 import { education, type EducationItem } from "../../data/education.data";
+import { formatPeriod } from "../../utils/utils";
 
 const typeIcon: Record<EducationItem["type"], typeof GraduationCap> = {
   degree: GraduationCap,
@@ -48,7 +49,7 @@ export function Education() {
                       {item.type}
                     </span>
                     <span className="font-mono text-xs text-muted-foreground">
-                      {item.period}
+                      {formatPeriod(item.start, item.end)}
                     </span>
                   </div>
 

@@ -4,6 +4,7 @@ import {
   CustomSectionHeading,
 } from "../../components/custom/CustomSection";
 import { experience } from "../../data/experience.data";
+import { formatPeriod } from "../../utils/utils";
 
 export function Experience() {
   return (
@@ -35,7 +36,7 @@ export function Experience() {
                   {item.role}
                 </h3>
                 <span className="font-mono text-xs text-muted-foreground">
-                  {item.period}
+                  {formatPeriod(item.start, item.end)}
                 </span>
               </div>
               <p className="mt-0.5 text-sm font-medium text-violet">
