@@ -5,6 +5,7 @@ import { useScroll } from "../../hooks/useScroll";
 import { useHideOnScroll } from "../../hooks/useHideOnScroll";
 import { useState } from "react";
 import { scrollToSection } from "../../utils/utils";
+import { CustomLanguageSwitcher } from "../../components/custom/CustomLanguageSwitcher";
 
 const ids = navigationData.map((n) => n.id);
 
@@ -60,19 +61,24 @@ export const Navigation = () => {
                 </motion.button>
               );
             })}
+            <span className="mx-1 h-6 w-px bg-white/10" aria-hidden="true" />
+            <CustomLanguageSwitcher />
           </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden text-white"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Menu size={24} />
-          </motion.button>
+          {/* Mobile: language switcher + menu button */}
+          <div className="flex items-center gap-3 md:hidden">
+            <CustomLanguageSwitcher />
+            <motion.button
+              className="text-white"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Menu size={24} />
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
