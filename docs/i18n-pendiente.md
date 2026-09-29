@@ -17,6 +17,7 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `src/views/education/Education.tsx` | Cabecera; `item.type` ("Degree", "Course"…) se pinta como texto |
 | `src/views/contact/Contact.tsx` | "Open to Work", "Ready to Build and Learn", párrafo de presentación, "Download CV", footer "Designed & built by…", array `socials` (label "Email") |
 | `src/components/custom/CustomAnimatedButton.tsx` | "Open to Work" |
+| `src/views/nav/Navigation.tsx` | `aria-label` del botón de menú: "Open menu" / "Close menu" |
 | `index.html` | `lang="en"` y `<title>` (hacer `lang` dinámico según idioma) |
 
 Nota: todo el contenido actual está en inglés; hay que escribir la versión en español.
@@ -24,4 +25,3 @@ Nota: todo el contenido actual está en inglés; hay que escribir la versión en
 ## Tareas pendientes
 
 - Hacer accesible el modal de proyectos (`ProjectModal.tsx`): gestión del foco, cerrar con Escape, `role="dialog"` / `aria-modal`, `aria-label` en el botón de cerrar. Se puede usar `Dialog` de `radix-ui` (el paquete sigue instalado aunque ahora no se usa).
-- Añadir `aria-label` al botón del menú móvil (`Navigation.tsx`).

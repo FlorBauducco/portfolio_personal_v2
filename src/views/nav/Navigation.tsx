@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import * as Icons from "lucide-react";
 import { navigationData } from "../../data/navigation.data";
 import { useScroll } from "../../hooks/useScroll";
+import { useHideOnScroll } from "../../hooks/useHideOnScroll";
 import { useState } from "react";
 import { scrollToSection } from "../../utils/utils";
 
@@ -10,6 +11,8 @@ const ids = navigationData.map((n) => n.id);
 export const Navigation = () => {
   const active = useScroll(ids);
   const [open, setOpen] = useState(false);
+  // Keep the nav visible while the mobile menu is open
+  const hidden = useHideOnScroll() && !open;
 
   const go = (id: string) => {
     scrollToSection(id);
@@ -18,13 +21,13 @@ export const Navigation = () => {
 
   return (
     <motion.nav
-      className="fixed top-4 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
+      className="fixed top-0 md:top-4 left-0 right-0 z-50 bg-black/40 backdrop-blur-md md:bg-transparent md:backdrop-blur-none"
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      animate={{ opacity: 1, y: hidden ? "-150%" : 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end md:justify-center h-16 md:h-20">
           <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-3">
             {navigationData.map((item) => {
               const Icon = Icons[
@@ -66,6 +69,8 @@ export const Navigation = () => {
             className="md:hidden text-white"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             whileTap={{ scale: 0.95 }}
           >
             <Icons.Menu size={24} />
@@ -76,6 +81,7 @@ export const Navigation = () => {
         <AnimatePresence>
           {open && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
