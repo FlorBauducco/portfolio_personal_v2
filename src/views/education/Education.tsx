@@ -7,10 +7,10 @@ import {
 import { education, type EducationItem } from "../../data/education.data";
 
 const typeIcon: Record<EducationItem["type"], typeof GraduationCap> = {
-  Degree: GraduationCap,
-  Bootcamp: Code2,
-  Course: BookOpen,
-  Certification: Award,
+  degree: GraduationCap,
+  bootcamp: Code2,
+  course: BookOpen,
+  certification: Award,
 };
 
 export function Education() {

@@ -14,7 +14,7 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `src/views/projects/Projects.tsx` | Cabecera, "View details", `aria-label` "Open details for …", `alt` "… preview" |
 | `src/views/projects/ProjectModal.tsx` | "N Technologies" (plural), "Technologies", "Challenges", "Solutions", "Learnings", "View Project", "View Code" |
 | `src/views/experience/Experience.tsx` | Cabecera (eyebrow / title / description) |
-| `src/views/education/Education.tsx` | Cabecera; `item.type` ("Degree", "Course"…) se pinta como texto |
+| `src/views/education/Education.tsx` | Cabecera; etiqueta del tipo: `{item.type}` → `t(\`education.types.${item.type}\`)` (ver tabla abajo) |
 | `src/views/contact/Contact.tsx` | "Open to Work", "Ready to Build and Learn", párrafo de presentación, "Download CV", footer "Designed & built by…" |
 | `src/data/contact.data.ts` | label "Email" del array `socials` |
 | `src/components/custom/CustomAnimatedButton.tsx` | "Open to Work" |
@@ -22,6 +22,17 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 | `index.html` | `lang="en"` y `<title>` (hacer `lang` dinámico según idioma) |
 
 Nota: todo el contenido actual está en inglés; hay que escribir la versión en español.
+
+### Tipos de educación (`education.types.<clave>`)
+
+La clave es el valor de `type` en `education.data.ts`.
+
+| clave | es | en |
+|---|---|---|
+| degree | Grado | Degree |
+| bootcamp | Bootcamp | Bootcamp |
+| course | Curso | Course |
+| certification | Certificación | Certification |
 
 ## Tareas pendientes
 
