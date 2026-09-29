@@ -10,7 +10,6 @@ Estos textos no están en `src/data/` y se moverán directamente a los JSON de t
 |---|---|
 | `src/views/hero/Hero.tsx` | "Hi, I'm", "Florencia Bauducco", frase "Junior **Fullstack Developer** passionate about technology…" (tiene un `<span>` en medio → usar `<Trans>`), "View Projects", "Contact Me", "Madrid, Spain", `alt` del avatar, `aria-label` "Scroll to about section" |
 | `src/views/about/About.tsx` | Cabecera (eyebrow / title / description), "Based in", "Madrid, Spain", coordenadas, `alt` "Madrid map" |
-| `src/views/skills/Skills.tsx` | Cabecera (eyebrow / title / description) |
 | `src/views/projects/Projects.tsx` | Cabecera, "View details", `aria-label` "Open details for …", `alt` "… preview" |
 | `src/views/projects/ProjectModal.tsx` | "N Technologies" (plural), "Technologies", "Challenges", "Solutions", "Learnings", "View Project", "View Code" |
 | `src/views/experience/Experience.tsx` | Cabecera (eyebrow / title / description) |

@@ -1,5 +1,28 @@
 {
   "language": {
     "switch": "Switch language to Spanish"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Tools & technologies",
+    "description": "The stack I reach for, the environment I work in, and the apps that keep my days running.",
+    "categories": {
+      "dev-env": {
+        "title": "Development Environment",
+        "subtitle": "Where the work happens"
+      },
+      "cli": {
+        "title": "CLI",
+        "subtitle": "Keyboard first"
+      },
+      "stack": {
+        "title": "Tech Stack",
+        "subtitle": "Frontend · Backend · Database"
+      },
+      "daily": {
+        "title": "Daily Apps",
+        "subtitle": "Collaboration & flow"
+      }
+    }
   }
 }

@@ -40,8 +40,6 @@ export interface Skill {
 
 export interface SkillCategory {
   id: string;
-  title: string;
-  subtitle: string;
   icon: LucideIcon;
   accent: "violet" | "blue" | "cyan";
   skills: Skill[];
@@ -50,8 +48,6 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     id: "dev-env",
-    title: "Development Environment",
-    subtitle: "Where the work happens",
     icon: Code2,
     accent: "violet",
     skills: [
@@ -63,8 +59,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "cli",
-    title: "CLI",
-    subtitle: "Keyboard first",
     icon: Terminal,
     accent: "blue",
     skills: [
@@ -77,8 +71,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "stack",
-    title: "Tech Stack",
-    subtitle: "Frontend · Backend · Database",
     icon: Layers,
     accent: "cyan",
     skills: [
@@ -94,8 +86,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "daily",
-    title: "Daily Apps",
-    subtitle: "Collaboration & flow",
     icon: AppWindow,
     accent: "violet",
     skills: [

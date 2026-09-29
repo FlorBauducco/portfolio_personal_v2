@@ -1,5 +1,28 @@
 {
   "language": {
     "switch": "Cambiar idioma a inglés"
+  },
+  "skills": {
+    "eyebrow": "Habilidades",
+    "title": "Herramientas y tecnologías",
+    "description": "El stack que uso, el entorno en el que trabajo y las apps que organizan mi día a día.",
+    "categories": {
+      "dev-env": {
+        "title": "Entorno de desarrollo",
+        "subtitle": "Donde ocurre el trabajo"
+      },
+      "cli": {
+        "title": "CLI",
+        "subtitle": "El teclado, primero"
+      },
+      "stack": {
+        "title": "Stack tecnológico",
+        "subtitle": "Frontend · Backend · Base de datos"
+      },
+      "daily": {
+        "title": "Apps del día a día",
+        "subtitle": "Colaboración y organización"
+      }
+    }
   }
 }
