@@ -15,7 +15,6 @@ export interface AboutCard {
   icon: LucideIcon;
   span: string;
   accent: "violet" | "blue" | "cyan";
-  isLocation?: boolean;
 }
 
 export const aboutCards: AboutCard[] = [

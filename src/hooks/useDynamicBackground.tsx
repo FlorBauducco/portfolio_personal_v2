@@ -41,6 +41,8 @@ export const useDynamicBackground = () => {
           }));
         };
     
+        let frameId = 0;
+
         const handleMouseMove = (e: MouseEvent) => {
           mouseRef.current = { x: e.clientX, y: e.clientY };
         };
@@ -94,7 +96,7 @@ export const useDynamicBackground = () => {
             ctx.fill();
           });
     
-          requestAnimationFrame(animate);
+          frameId = requestAnimationFrame(animate);
         };
     
         window.addEventListener('mousemove', handleMouseMove);
@@ -104,6 +106,7 @@ export const useDynamicBackground = () => {
         animate();
     
         return () => {
+          cancelAnimationFrame(frameId);
           window.removeEventListener('mousemove', handleMouseMove);
           window.removeEventListener('resize', resizeCanvas);
         };

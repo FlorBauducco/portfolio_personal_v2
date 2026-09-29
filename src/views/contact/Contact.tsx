@@ -29,7 +29,7 @@ const socials: Social[] = [
   {
     label: "Email",
     handle: "florazul.fb@gmail.com",
-    href: "florazul.fb@gmail.com",
+    href: "mailto:florazul.fb@gmail.com",
     icon: Mail,
   },
 ];
