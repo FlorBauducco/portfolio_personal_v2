@@ -25,13 +25,13 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    id: "zaitec",
-    role: "Junior Fullstack Developer",
-    company: "Zaitec",
+    id: "master-d",
+    role: "Full Stack Developer Trainee",
+    company: "Master D",
     period: "2026",
     description:
-      "Developed a virtual tour platform for educational centers with React, TypeScript and Unity (C#).",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Unity", "C#"],
+      "Developed a virtual tour platform for educational centers with React, TypeScript and Unity (C#), with agile methodologies and teamwork.",
+    tech: ["React", "TypeScript", "Docker", "Unity", "C#", "GitHub", "Jira"],
   },
   {
     id: "apex-america",
