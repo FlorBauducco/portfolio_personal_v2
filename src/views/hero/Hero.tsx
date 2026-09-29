@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mx-auto flex min-h-screen w-full max-w-6xl scroll-mt-28 flex-col items-center justify-center px-4 py-32 text-center sm:px-6"
+      className="relative mx-auto flex min-h-screen w-full max-w-6xl scroll-mt-28 flex-col items-center justify-center px-4 pt-24 pb-32 text-center sm:px-6 sm:py-32"
     >
       <motion.div
         initial={{ opacity: 0, y: 16 }}
