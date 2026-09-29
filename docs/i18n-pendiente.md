@@ -37,4 +37,5 @@ La clave es el valor de `type` en `education.data.ts`.
 
 ## Tareas pendientes
 
+- Proyectos: cuando un proyecto no tenga `liveUrl`, mostrar una etiqueta "No disponible online" (en: "Not available online"). Decidir también el diseño de la fila de botones del modal (ahora "View Code" ocupa todo el ancho si está solo).
 - Hacer accesible el modal de proyectos (`ProjectModal.tsx`): gestión del foco, cerrar con Escape, `role="dialog"` / `aria-modal`, `aria-label` en el botón de cerrar. Se puede usar `Dialog` de `radix-ui` (el paquete sigue instalado aunque ahora no se usa).

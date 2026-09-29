@@ -28,7 +28,6 @@ export const projects: Project[] = [
     image: "/projects/visitas-virtuales.png",
     accent: "blue",
     category: "professional",
-    liveUrl: "https://visitasvirtuales.dedyn.io/    ",
     codeUrl: "https://github.com/jaimemoya-bit/VisitasVirtualesZaitec",
     challenges: [
       "Integrating Unity WebGL with a modern React application.",

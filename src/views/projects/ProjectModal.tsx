@@ -124,28 +124,32 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
-                <motion.a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-3 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-indigo-500/50 transition-all"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <ExternalLink size={18} />
-                  View Project
-                </motion.a>
-                <motion.a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-3 rounded-lg border border-gray-400 text-white font-medium flex items-center justify-center gap-2 hover:border-gray-300 hover:bg-white/5 transition-all"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <SiGithub size={18} />
-                  View Code
-                </motion.a>
+                {project.liveUrl && (
+                  <motion.a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-3 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-indigo-500/50 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <ExternalLink size={18} />
+                    View Project
+                  </motion.a>
+                )}
+                {project.codeUrl && (
+                  <motion.a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 text-white font-medium flex items-center justify-center gap-2 hover:border-gray-300 hover:bg-white/5 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <SiGithub size={18} />
+                    View Code
+                  </motion.a>
+                )}
               </div>
             </div>
           </motion.div>
