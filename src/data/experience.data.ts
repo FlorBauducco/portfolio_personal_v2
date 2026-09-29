@@ -3,30 +3,43 @@ export interface ExperienceItem {
   role: string;
   company: string;
   period: string;
+  description: string;
   tech?: string[];
-  achievements: string[];
 }
 export const experience: ExperienceItem[] = [
+  {
+    id: "freelance",
+    role: "Freelance Developer",
+    company: "Freelance",
+    period: "2026 – Present",
+    description:
+      "Designing and building custom websites for small businesses and independent clients, such as Altivia Tattoo.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Cloudinary",
+      "Cloudflare",
+      "Resend",
+      "GitHub",
+    ],
+  },
   {
     id: "zaitec",
     role: "Junior Fullstack Developer",
     company: "Zaitec",
-    period: "mar 2026 - Jun 2026",
+    period: "2026",
+    description:
+      "Developed a virtual tour platform for educational centers with React, TypeScript and Unity (C#).",
     tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Unity", "C#"],
-    achievements: [
-      "Developed interactive features and application logic in Unity using C#.",
-      "Designed and implemented a custom Point of Interest (POI) Editor to improve content management workflows.",
-      "Integrated Unity applications with web-based systems and services.",
-      "Contributed to frontend development using React.",
-      "Collaborated in an Agile environment using Jira and GitHub for project management and version control.",
-      "Worked closely with a distributed development team in a remote collaborative environment.",
-    ],
   },
   {
     id: "apex-america",
     role: "Technical Support Specialist, FTTH & mobile",
-    company: "Apex America ",
-    period: "Jul 2019 - Dec 2021",
+    company: "Apex America",
+    period: "2019 – 2021",
+    description:
+      "Diagnosed and resolved network, mobile and FTTH connectivity issues, managing incidents through Jira and Remedy.",
     tech: [
       "Remedy",
       "Jira",
@@ -34,24 +47,6 @@ export const experience: ExperienceItem[] = [
       "Cisco",
       "Troubleshooting apps",
       "Excel",
-    ],
-    achievements: [
-      "Diagnosed and resolved network, software, mobile device, and FTTH connectivity issues.",
-      "Managed and tracked technical incidents using Jira, and Remedy ticketing systems.",
-      "Performed structured troubleshooting and escalation to N2 support teams.",
-      "Strengthened analytical thinking, technical documentation, and problem-solving skills in a service-oriented environment.",
-    ],
-  },
-  {
-    id: "oximesa",
-    role: "Patient Administration & Customer Service",
-    company: "Oximesa - Nippon Sanso",
-    period: "nov 2024 - current",
-    tech: ["Dynamic 360", "AS400", "Excel"],
-    achievements: [
-      "Managed patient data and records using AS400 and Dynamics 365, ensuring data accuracy and traceability.",
-      "Handled high-volume incidents, requests, and back-office operations through corporate CRM systems.",
-      "Developed strong communication, organization, and problem-solving skills in a fast-paced corporate environment.",
     ],
   },
 ];

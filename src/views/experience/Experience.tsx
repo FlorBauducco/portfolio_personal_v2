@@ -41,17 +41,9 @@ export function Experience() {
               <p className="mt-0.5 text-sm font-medium text-violet">
                 {item.company}
               </p>
-              <ul className="mt-3 space-y-1.5">
-                {item.achievements.map((a) => (
-                  <li
-                    key={a}
-                    className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
-                  >
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground" />
-                    {a}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {item.tech?.map((t) => (
                   <span
