@@ -7,6 +7,7 @@ export interface Project {
   tech: string[];
   image: string;
   accent: "violet" | "blue" | "cyan" | "rose";
+  category: "professional" | "training";
   liveUrl?: string;
   codeUrl?: string;
   challenges: string[];
@@ -26,6 +27,7 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Unity", "C#"],
     image: "/projects/visitas-virtuales.png",
     accent: "blue",
+    category: "professional",
     liveUrl: "https://visitasvirtuales.dedyn.io/    ",
     codeUrl: "https://github.com/jaimemoya-bit/VisitasVirtualesZaitec",
     challenges: [
