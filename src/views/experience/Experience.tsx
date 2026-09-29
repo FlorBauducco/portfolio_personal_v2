@@ -4,6 +4,7 @@ import {
   CustomSectionHeading,
 } from "../../components/custom/CustomSection";
 import { experience } from "../../data/experience.data";
+import { CustomTechChip } from "../../components/custom/CustomTechChip";
 import { formatPeriod } from "../../utils/utils";
 
 export function Experience() {
@@ -47,12 +48,7 @@ export function Experience() {
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {item.tech?.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-md border border-border bg-secondary/50 px-2 py-0.5 text-xs text-muted-foreground"
-                  >
-                    {t}
-                  </span>
+                  <CustomTechChip key={t} name={t} />
                 ))}
               </div>
             </div>

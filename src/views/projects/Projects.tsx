@@ -9,6 +9,7 @@ import { accentBar, accentGlow } from "../../utils/lib/Index";
 import { cn } from "../../utils/utils";
 import { projects, type Project } from "../../data/project.data";
 import { ProjectModal } from "./ProjectModal";
+import { CustomTechChip } from "../../components/custom/CustomTechChip";
 
 export function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -71,12 +72,7 @@ export function Projects() {
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {project.tech.slice(0, 4).map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-md border border-border bg-secondary/50 px-2 py-0.5 text-xs text-muted-foreground"
-                  >
-                    {t}
-                  </span>
+                  <CustomTechChip key={t} name={t} />
                 ))}
               </div>
               <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
