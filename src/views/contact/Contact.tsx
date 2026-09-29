@@ -1,38 +1,8 @@
-import type { ComponentType, SVGProps } from "react";
-import { Mail, Download, ArrowUpRight } from "lucide-react";
+import { Download, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { CustomSection } from "../../components/custom/CustomSection";
 import { CustomReveal } from "../../components/custom/CustomReveal";
-import { LinkedinIcon } from "../../components/icons/LinkedinIcon";
-import { GithubIcon } from "../../components/icons/GithubIcon";
-
-type Social = {
-  label: string;
-  handle: string;
-  href: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
-};
-
-const socials: Social[] = [
-  {
-    label: "LinkedIn",
-    handle: "in/florencia-bauducco",
-    href: "https://www.linkedin.com/in/florencia-bauducco/",
-    icon: LinkedinIcon,
-  },
-  {
-    label: "GitHub",
-    handle: "@Flor.bauducco",
-    href: "https://github.com/FlorBauducco",
-    icon: GithubIcon,
-  },
-  {
-    label: "Email",
-    handle: "florazul.fb@gmail.com",
-    href: "mailto:florazul.fb@gmail.com",
-    icon: Mail,
-  },
-];
+import { socials } from "../../data/contact.data";
 
 export function Contact() {
   return (
@@ -80,7 +50,7 @@ export function Contact() {
               const Icon = s.icon;
               return (
                 <motion.a
-                  key={s.label}
+                  key={s.id}
                   href={s.href}
                   target={s.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
