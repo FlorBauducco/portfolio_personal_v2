@@ -8,7 +8,7 @@ export interface ExperienceItem {
 }
 export const experience: ExperienceItem[] = [
   {
-    id: "exp-1",
+    id: "zaitec",
     role: "Junior Fullstack Developer",
     company: "Zaitec",
     period: "mar 2026 - Jun 2026",
@@ -23,7 +23,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    id: "exp-2",
+    id: "apex-america",
     role: "Technical Support Specialist, FTTH & mobile",
     company: "Apex America ",
     period: "Jul 2019 - Dec 2021",
@@ -43,7 +43,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    id: "exp-3",
+    id: "oximesa",
     role: "Patient Administration & Customer Service",
     company: "Oximesa - Nippon Sanso",
     period: "nov 2024 - current",

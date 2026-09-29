@@ -9,7 +9,7 @@ export interface EducationItem {
 
 export const education: EducationItem[] = [
   {
-    id: "edu-1",
+    id: "davante-dam",
     title: "Higher Degree in Multiplatform Application Development",
     org: "Davante",
     period: "2024 - 2026",
@@ -18,7 +18,7 @@ export const education: EducationItem[] = [
       "Comprehensive training in multiplatform software development, including Java, Spring Boot, databases, and web development.",
   },
   {
-    id: "edu-2",
+    id: "udemy-fullstack",
     title: "Full Stack Web Development Course",
     org: "Udemy",
     period: "2026",
@@ -27,7 +27,7 @@ export const education: EducationItem[] = [
       "Training focused on full stack web development for real-world environments, including projects integrating frontend, backend, relational databases, and online payment systems.",
   },
   {
-    id: "edu-3",
+    id: "udemy-react-typescript",
     title: "React, TypeScript & Next JS",
     org: "Udemy",
     period: "2026",

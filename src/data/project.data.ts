@@ -16,7 +16,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "visitasVirtuales",
+    id: "visitas-virtuales",
     title: "Visitas Virtuales",
     year: "2026",
     summary:
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "firstPortfolio",
+    id: "first-portfolio",
     title: "My first Portfolio",
     year: "2026",
     summary:
