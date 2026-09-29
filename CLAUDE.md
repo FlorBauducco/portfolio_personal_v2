@@ -14,6 +14,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Trabaja siempre en una rama, nunca directamente en main.
 - Al terminar cada cambio, ejecuta `pnpm lint` y `pnpm build`
   para comprobar que no hay errores.
+- Traducciones al español: mantener en inglés los términos técnicos
+  que se usan así en el sector (stack, frontend, backend, CLI,
+  nombres de herramientas). Traducir frases, descripciones y
+  títulos generales.
 
 ## Objetivo del proyecto
 
