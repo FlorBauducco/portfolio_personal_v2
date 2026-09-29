@@ -44,34 +44,4 @@ export const projects: Project[] = [
       "Learned how to balance technical complexity with an intuitive user experience for educational audiences.",
     ],
   },
-  {
-    id: "first-portfolio",
-    title: "My first Portfolio",
-    year: "2026",
-    summary:
-      "A personal portfolio website built as my first frontend project to showcase my skills, projects, and journey as a web developer.",
-    description:
-      "This project is a responsive single-page portfolio developed with React. It was created as an introduction to frontend development, focusing on presenting my work, skills, and contact information in a clear and accessible way.",
-    tech: ["React", "TypeScript", "Tailwind", "Vite", "Custom Hooks"],
-    image: "/projects/first-portfolio.png",
-    accent: "violet",
-    liveUrl: "https://portfolio-florencia-three.vercel.app/",
-    codeUrl: "https://github.com/FlorBauducco/portfolio_florencia",
-    challenges: [
-      "Structuring my first React application from scratch.",
-      "Designing a clean and responsive layout without prior experience.",
-      " Organizing components and project sections effectively.",
-      "Understanding deployment and hosting workflows",
-    ],
-    solutions: [
-      "Broke the interface into reusable React components. Used a simple and consistent design approach to ensure usability.",
-      "Focused on responsive design principles for different devices.",
-      "Deployed the project using modern hosting tools to make it accessible online",
-    ],
-    learnings: [
-      "First experience building with React.",
-      "Learned component-based architecture and responsive design.",
-      "Gained confidence in building and deploying real projects",
-    ],
-  },
 ];
