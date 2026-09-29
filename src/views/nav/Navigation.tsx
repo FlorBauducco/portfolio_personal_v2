@@ -10,7 +10,6 @@ const ids = navigationData.map((n) => n.id);
 export const Navigation = () => {
   const active = useScroll(ids);
   const [open, setOpen] = useState(false);
-  const [isScrolled] = useState(false);
 
   const go = (id: string) => {
     scrollToSection(id);
@@ -19,11 +18,7 @@ export const Navigation = () => {
 
   return (
     <motion.nav
-      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-black/40 backdrop-blur-md border-b border-white/5"
-          : "bg-transparent"
-      }`}
+      className="fixed top-4 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

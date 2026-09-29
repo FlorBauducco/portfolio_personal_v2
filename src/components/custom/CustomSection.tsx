@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { motion } from "framer-motion";
 import { CustomReveal } from "./CustomReveal";
 import { cn } from "../../utils/utils";
 
@@ -48,7 +47,7 @@ interface SectionProps {
 
 export function CustomSection({ id, children, className }: SectionProps) {
   return (
-    <motion.section
+    <section
       id={id}
       className={cn(
         "mx-auto w-full max-w-6xl scroll-mt-28 px-4 py-20 sm:px-6 sm:py-28",
@@ -56,6 +55,6 @@ export function CustomSection({ id, children, className }: SectionProps) {
       )}
     >
       {children}
-    </motion.section>
+    </section>
   );
 }

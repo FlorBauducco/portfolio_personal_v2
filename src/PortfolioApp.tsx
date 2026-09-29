@@ -10,22 +10,20 @@ import { Contact } from "./views/contact/Contact";
 
 function PortfolioApp() {
   return (
-    <>
-      <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
-        <CustomDynamicBackground />
+    <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
+      <CustomDynamicBackground />
 
-        <div className="relative z-10">
-          <Navigation />
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Education />
-          <Contact />
-        </div>
+      <div className="relative z-10">
+        <Navigation />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
       </div>
-    </>
+    </div>
   );
 }
 
