@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { GraduationCap, Award, BookOpen, Code2 } from "lucide-react";
 import {
   CustomSection,
@@ -15,6 +16,8 @@ const typeIcon: Record<EducationItem["type"], typeof GraduationCap> = {
 };
 
 export function Education() {
+  const { t } = useTranslation();
+
   return (
     <CustomSection id="education">
       <CustomSectionHeading
@@ -49,7 +52,7 @@ export function Education() {
                       {item.type}
                     </span>
                     <span className="font-mono text-xs text-muted-foreground">
-                      {formatPeriod(item.start, item.end)}
+                      {formatPeriod(item.start, item.end, t("common.present"))}
                     </span>
                   </div>
 

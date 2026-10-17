@@ -120,5 +120,24 @@
         ]
       }
     }
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "title": "Construyendo las bases",
+    "description": "Mi camino hacia la tecnología no ha sido lineal, pero cada paso me ha ayudado a crecer. He construido resiliencia, colaboración y mentalidad analítica que me impulsan hoy como una mejor desarrolladora.",
+    "items": {
+      "freelance": {
+        "role": "Desarrolladora Freelance",
+        "description": "Diseño y desarrollo de webs a medida para pequeños negocios y clientes independientes."
+      },
+      "master-d": {
+        "role": "Desarrolladora Full Stack en prácticas",
+        "description": "Desarrollo de una plataforma de visitas virtuales para centros educativos con React, TypeScript y Unity (C#), con metodologías ágiles y trabajo en equipo."
+      },
+      "apex-america": {
+        "role": "Especialista de soporte técnico, FTTH y móvil",
+        "description": "Diagnóstico y resolución de incidencias de red, móvil y conectividad FTTH, gestionadas con Jira y Remedy."
+      }
+    }
   }
 }

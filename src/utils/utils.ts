@@ -10,9 +10,14 @@ export function scrollToSection(id: string) {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// "2024 – 2026", "2026" (same year) or "2026 – Present" (end = null)
-export function formatPeriod(start: number, end: number | null) {
-  if (end === null) return `${start} – Present`;
+// "2024 – 2026", "2026" (same year) or "2026 – <presentLabel>" (end = null).
+// presentLabel comes from the caller's t("common.present").
+export function formatPeriod(
+  start: number,
+  end: number | null,
+  presentLabel: string,
+) {
+  if (end === null) return `${start} – ${presentLabel}`;
   if (end === start) return `${start}`;
   return `${start} – ${end}`;
 }
