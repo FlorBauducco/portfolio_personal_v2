@@ -18,6 +18,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   que se usan así en el sector (stack, frontend, backend, CLI,
   nombres de herramientas). Traducir frases, descripciones y
   títulos generales.
+- En los textos en español no usar la palabra "oficio"; usar
+  expresiones más naturales ("mi trabajo", "el proceso",
+  "el desarrollo").
 
 ## Objetivo del proyecto
 
