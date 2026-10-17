@@ -139,5 +139,30 @@
         "description": "Diagnóstico y resolución de incidencias de red, móvil y conectividad FTTH, gestionadas con Jira y Remedy."
       }
     }
+  },
+  "education": {
+    "eyebrow": "Formación",
+    "title": "Nunca dejo de aprender",
+    "description": "Estudios oficiales en desarrollo de software combinados con formación continua en tecnologías web modernas.",
+    "types": {
+      "degree": "Grado",
+      "bootcamp": "Bootcamp",
+      "course": "Curso",
+      "certification": "Certificación"
+    },
+    "items": {
+      "davante-dam": {
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+        "description": "Formación completa en desarrollo de software multiplataforma: Java, Spring Boot, bases de datos y desarrollo web."
+      },
+      "udemy-fullstack": {
+        "title": "Curso de Desarrollo Web Full Stack",
+        "description": "Formación en desarrollo web full stack orientada a entornos reales, con proyectos que integran frontend, backend, bases de datos relacionales y pasarelas de pago online."
+      },
+      "udemy-react-typescript": {
+        "title": "React, TypeScript & Next JS",
+        "description": "Formación en React y TypeScript basada en proyectos reales: gestión de estado, autenticación, testing y desarrollo full stack con Node.js, Express y bases de datos."
+      }
+    }
   }
 }

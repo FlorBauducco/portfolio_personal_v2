@@ -139,5 +139,30 @@
         "description": "Diagnosed and resolved network, mobile and FTTH connectivity issues, managing incidents through Jira and Remedy."
       }
     }
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Learning never stops",
+    "description": "Formal studies in software development combined with continuous learning in modern web technologies.",
+    "types": {
+      "degree": "Degree",
+      "bootcamp": "Bootcamp",
+      "course": "Course",
+      "certification": "Certification"
+    },
+    "items": {
+      "davante-dam": {
+        "title": "Higher Degree in Multiplatform Application Development (DAM)",
+        "description": "Comprehensive training in multiplatform software development, including Java, Spring Boot, databases, and web development."
+      },
+      "udemy-fullstack": {
+        "title": "Full Stack Web Development Course",
+        "description": "Training focused on full stack web development for real-world environments, including projects integrating frontend, backend, relational databases, and online payment systems."
+      },
+      "udemy-react-typescript": {
+        "title": "React, TypeScript & Next JS",
+        "description": "Training in React and TypeScript focused on real-world projects, including state management, authentication, testing, and full stack development with Node.js, Express, and databases."
+      }
+    }
   }
 }
