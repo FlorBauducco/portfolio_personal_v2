@@ -37,7 +37,7 @@
     "closeMenu": "Cerrar menú"
   },
   "common": {
-    "openToWork": "Disponible para trabajar",
+    "openToWork": "Abierta a oportunidades",
     "location": "Madrid, España",
     "present": "Actualidad"
   },
@@ -76,7 +76,7 @@
       },
       "fun": {
         "title": "Lejos del teclado",
-        "body": "Escalada en bloque, mate argentino de especialidad y demasiados proyectos personales a medio terminar."
+        "body": "Hacer deporte, leer un buen libro y mate argentino de especialidad y siempre con alguna idea en mente para mi próximo proyecto personal."
       }
     },
     "basedIn": "Ubicada en",
@@ -84,7 +84,7 @@
   },
   "projects": {
     "eyebrow": "Proyectos",
-    "title": "Lo que he construido",
+    "title": "Algunos de mis proyectos",
     "description": "Una selección de proyectos profesionales y de formación.",
     "viewDetails": "Ver detalles",
     "openDetails": "Ver detalles de {{title}}",
@@ -101,7 +101,7 @@
     },
     "items": {
       "visitas-virtuales": {
-        "summary": "Plataforma de visitas virtuales para centros educativos, desarrollada como Desarrolladora Full Stack en prácticas en Master D.",
+        "summary": "Plataforma de visitas virtuales para centros educativos, desarrollada como Desarrolladora Full Stack en Master D.",
         "description": "Plataforma web que permite a centros educativos ofrecer visitas virtuales interactivas de sus instalaciones. Trabajé en el frontend con React y TypeScript, en la integración entre Unity (C#) y la web, y en un editor de Puntos de Interés (POI) en Unity para configurar los entornos virtuales. Desarrollada en un equipo remoto con GitHub, Jira y metodología ágil.",
         "challenges": [
           "Conectar una aplicación de Unity (C#) con un frontend web en React.",
@@ -123,7 +123,7 @@
   },
   "experience": {
     "eyebrow": "Experiencia",
-    "title": "Construyendo las bases",
+    "title": "Mi trayectoria",
     "description": "Mi camino hacia la tecnología no ha sido lineal, pero cada paso me ha ayudado a crecer. He construido resiliencia, colaboración y mentalidad analítica que me impulsan hoy como una mejor desarrolladora.",
     "items": {
       "freelance": {
@@ -131,7 +131,7 @@
         "description": "Diseño y desarrollo de webs a medida para pequeños negocios y clientes independientes."
       },
       "master-d": {
-        "role": "Desarrolladora Full Stack en prácticas",
+        "role": "Desarrolladora Full Stack",
         "description": "Desarrollo de una plataforma de visitas virtuales para centros educativos con React, TypeScript y Unity (C#), con metodologías ágiles y trabajo en equipo."
       },
       "apex-america": {
@@ -142,7 +142,7 @@
   },
   "education": {
     "eyebrow": "Formación",
-    "title": "Nunca dejo de aprender",
+    "title": "Siempre aprendiendo",
     "description": "Estudios oficiales en desarrollo de software combinados con formación continua en tecnologías web modernas.",
     "types": {
       "degree": "Grado",
@@ -166,8 +166,8 @@
     }
   },
   "contact": {
-    "title": "Lista para construir y aprender",
-    "description": "Busco mi próximo puesto como Desarrolladora Full Stack Junior. Si crees que encajaría en tu equipo, me encantaría hablar contigo.",
+    "title": "¿Hablamos?",
+    "description": "Busco mi próximo puesto como Desarrolladora Full Stack Junior. Si crees que encajaría en tu equipo, me encantaría saber más.",
     "downloadCv": "Descargar CV",
     "socials": {
       "linkedin": "LinkedIn",

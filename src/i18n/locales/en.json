@@ -76,7 +76,7 @@
       },
       "fun": {
         "title": "Off the keyboard",
-        "body": "Bouldering, specialty argentinian mate, and far too many half-finished side projects."
+        "body": "Working out, reading a good book and specialty Argentinian mate, and always with an idea in mind for my next side project."
       }
     },
     "basedIn": "Based in",
@@ -84,7 +84,7 @@
   },
   "projects": {
     "eyebrow": "Projects",
-    "title": "Things I've built",
+    "title": "A few of my projects",
     "description": "A selection of professional and training projects.",
     "viewDetails": "View details",
     "openDetails": "Open details for {{title}}",
@@ -101,7 +101,7 @@
     },
     "items": {
       "visitas-virtuales": {
-        "summary": "Virtual tour platform for educational centers, built as a Full Stack Developer Trainee at Master D.",
+        "summary": "Virtual tour platform for educational centers, built as a Full Stack Developer at Master D.",
         "description": "A web platform that lets educational centers offer interactive virtual tours of their facilities. I worked on the React and TypeScript frontend, the integration between Unity (C#) and the web, and a Points of Interest (POI) editor in Unity used to configure the virtual environments. Built in a remote team using GitHub, Jira and agile methodology.",
         "challenges": [
           "Connecting a Unity (C#) application with a React web frontend.",
@@ -123,7 +123,7 @@
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "Building the Foundations",
+    "title": "My journey",
     "description": "My path into tech hasn't been linear, but every step has helped me grow. I've built the resilience, collaboration, and analytical mindset that drive me to be a better developer today.",
     "items": {
       "freelance": {
@@ -131,7 +131,7 @@
         "description": "Designing and building custom websites for small businesses and independent clients."
       },
       "master-d": {
-        "role": "Full Stack Developer Trainee",
+        "role": "Full Stack Developer",
         "description": "Developed a virtual tour platform for educational centers with React, TypeScript and Unity (C#), with agile methodologies and teamwork."
       },
       "apex-america": {
@@ -142,7 +142,7 @@
   },
   "education": {
     "eyebrow": "Education",
-    "title": "Learning never stops",
+    "title": "Always learning",
     "description": "Formal studies in software development combined with continuous learning in modern web technologies.",
     "types": {
       "degree": "Degree",
@@ -166,8 +166,8 @@
     }
   },
   "contact": {
-    "title": "Ready to Build and Learn",
-    "description": "I'm looking for my next role as a Junior Full Stack Developer. If you think I'd be a good fit, I'd love to talk with you.",
+    "title": "Let's talk",
+    "description": "I'm looking for my next role as a Junior Full Stack Developer. If you think I'd be a good fit for your team, I'd love to hear more.",
     "downloadCv": "Download CV",
     "socials": {
       "linkedin": "LinkedIn",
