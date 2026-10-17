@@ -81,5 +81,44 @@
     },
     "basedIn": "Based in",
     "mapAlt": "Madrid map"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Things I've built",
+    "description": "A selection of professional and training projects.",
+    "viewDetails": "View details",
+    "openDetails": "Open details for {{title}}",
+    "previewAlt": "{{title}} preview",
+    "modal": {
+      "technologies_one": "{{count}} Technology",
+      "technologies_other": "{{count}} Technologies",
+      "technologiesTitle": "Technologies",
+      "challenges": "Challenges",
+      "solutions": "Solutions",
+      "learnings": "Learnings",
+      "viewProject": "View Project",
+      "viewCode": "View Code"
+    },
+    "items": {
+      "visitas-virtuales": {
+        "summary": "Virtual tour platform for educational centers, built as a Full Stack Developer Trainee at Master D.",
+        "description": "A web platform that lets educational centers offer interactive virtual tours of their facilities. I worked on the React and TypeScript frontend, the integration between Unity (C#) and the web, and a Points of Interest (POI) editor in Unity used to configure the virtual environments. Built in a remote team using GitHub, Jira and agile methodology.",
+        "challenges": [
+          "Connecting a Unity (C#) application with a React web frontend.",
+          "Making virtual environments easy to configure without editing Unity code.",
+          "Coordinating work and code within a remote team."
+        ],
+        "solutions": [
+          "Built the communication between Unity and the web so both stay in sync.",
+          "Developed a Points of Interest (POI) editor in Unity to configure each virtual environment.",
+          "Organized tasks in Jira and code in GitHub, following an agile methodology."
+        ],
+        "learnings": [
+          "Integrating a game engine with a modern web application.",
+          "Building internal tools that make content easier to manage.",
+          "Working effectively in a remote agile team."
+        ]
+      }
+    }
   }
 }

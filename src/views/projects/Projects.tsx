@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { ArrowUpRight, Code2 } from "lucide-react";
 import {
   CustomSection,
@@ -12,14 +13,15 @@ import { ProjectModal } from "./ProjectModal";
 import { CustomTechChip } from "../../components/custom/CustomTechChip";
 
 export function Projects() {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
     <CustomSection id="projects">
       <CustomSectionHeading
-        eyebrow="Projects"
-        title="Things I've built"
-        description="A selection of projects where I owned the work end-to-end. Click any card for the full story."
+        eyebrow={t("projects.eyebrow")}
+        title={t("projects.title")}
+        description={t("projects.description")}
       />
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -41,7 +43,7 @@ export function Projects() {
               "group relative overflow-hidden rounded-2xl border border-border bg-card text-left transition-shadow cursor-pointer",
               accentGlow[project.accent],
             )}
-            aria-label={`Open details for ${project.title}`}
+            aria-label={t("projects.openDetails", { title: project.title })}
           >
             <span
               className={cn(
@@ -52,7 +54,7 @@ export function Projects() {
             <div className="relative aspect-16/10 w-full overflow-hidden">
               <img
                 src={project.image || "/placeholder.svg"}
-                alt={`${project.title} preview`}
+                alt={t("projects.previewAlt", { title: project.title })}
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-card via-transparent to-transparent" />
@@ -68,16 +70,16 @@ export function Projects() {
                 </span>
               </div>
               <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
-                {project.summary}
+                {t(`projects.items.${project.id}.summary`)}
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {project.tech.slice(0, 4).map((t) => (
-                  <CustomTechChip key={t} name={t} />
+                {project.tech.slice(0, 4).map((tech) => (
+                  <CustomTechChip key={tech} name={tech} />
                 ))}
               </div>
               <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-1 font-medium text-foreground transition-colors group-hover:text-violet">
-                  View details
+                  {t("projects.viewDetails")}
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
                 {project.codeUrl && (

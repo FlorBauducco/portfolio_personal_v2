@@ -81,5 +81,44 @@
     },
     "basedIn": "Ubicada en",
     "mapAlt": "Mapa de Madrid"
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "title": "Lo que he construido",
+    "description": "Una selección de proyectos profesionales y de formación.",
+    "viewDetails": "Ver detalles",
+    "openDetails": "Ver detalles de {{title}}",
+    "previewAlt": "Vista previa de {{title}}",
+    "modal": {
+      "technologies_one": "{{count}} tecnología",
+      "technologies_other": "{{count}} tecnologías",
+      "technologiesTitle": "Tecnologías",
+      "challenges": "Retos",
+      "solutions": "Soluciones",
+      "learnings": "Aprendizajes",
+      "viewProject": "Ver proyecto",
+      "viewCode": "Ver código"
+    },
+    "items": {
+      "visitas-virtuales": {
+        "summary": "Plataforma de visitas virtuales para centros educativos, desarrollada como Desarrolladora Full Stack en prácticas en Master D.",
+        "description": "Plataforma web que permite a centros educativos ofrecer visitas virtuales interactivas de sus instalaciones. Trabajé en el frontend con React y TypeScript, en la integración entre Unity (C#) y la web, y en un editor de Puntos de Interés (POI) en Unity para configurar los entornos virtuales. Desarrollada en un equipo remoto con GitHub, Jira y metodología ágil.",
+        "challenges": [
+          "Conectar una aplicación de Unity (C#) con un frontend web en React.",
+          "Hacer que los entornos virtuales se pudieran configurar sin tocar código de Unity.",
+          "Coordinar el trabajo y el código dentro de un equipo remoto."
+        ],
+        "solutions": [
+          "Desarrollé la comunicación entre Unity y la web para mantener ambas partes sincronizadas.",
+          "Creé un editor de Puntos de Interés (POI) en Unity para configurar cada entorno virtual.",
+          "Organizamos las tareas en Jira y el código en GitHub, siguiendo una metodología ágil."
+        ],
+        "learnings": [
+          "Integrar un motor de videojuegos con una aplicación web moderna.",
+          "Crear herramientas internas que facilitan la gestión de contenido.",
+          "Trabajar de forma eficaz en un equipo ágil remoto."
+        ]
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, X } from "lucide-react";
 import { SiGithub } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 import type { Project } from "../../data/project.data";
 
 interface ProjectModalProps {
@@ -9,6 +10,13 @@ interface ProjectModalProps {
 }
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
+  const { t } = useTranslation();
+  // Translated list (challenges / solutions / learnings) for the open project
+  const list = (field: string) =>
+    t(`projects.items.${project?.id}.${field}`, {
+      returnObjects: true,
+    }) as string[];
+
   return (
     <AnimatePresence>
       {project && (
@@ -51,18 +59,18 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <span className="text-sm">{project.year}</span>
                   <div className="w-1 h-1 rounded-full bg-gray-600" />
                   <p className="text-sm">
-                    {project.tech.length} Technologies
+                    {t("projects.modal.technologies", { count: project.tech.length })}
                   </p>
                 </div>
               </div>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                {project.description}
+                {t(`projects.items.${project.id}.description`)}
               </p>
 
               <div>
                 <h3 className="text-white font-semibold mb-3">
-                  Technologies
+                  {t("projects.modal.technologiesTitle")}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
@@ -78,10 +86,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               <div>
                 <h3 className="text-white font-semibold mb-3">
-                  Challenges
+                  {t("projects.modal.challenges")}
                 </h3>
                 <ul className="space-y-2">
-                  {project.challenges.map((challenge, idx) => (
+                  {list("challenges").map((challenge, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -94,9 +102,11 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-3">Solutions</h3>
+                <h3 className="text-white font-semibold mb-3">
+                  {t("projects.modal.solutions")}
+                </h3>
                 <ul className="space-y-2">
-                  {project.solutions.map((solution, idx) => (
+                  {list("solutions").map((solution, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -109,9 +119,11 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-3">Learnings</h3>
+                <h3 className="text-white font-semibold mb-3">
+                  {t("projects.modal.learnings")}
+                </h3>
                 <ul className="space-y-2">
-                  {project.learnings.map((learnings, idx) => (
+                  {list("learnings").map((learnings, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -134,7 +146,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     whileTap={{ scale: 0.98 }}
                   >
                     <ExternalLink size={18} />
-                    View Project
+                    {t("projects.modal.viewProject")}
                   </motion.a>
                 )}
                 {project.codeUrl && (
@@ -147,7 +159,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     whileTap={{ scale: 0.98 }}
                   >
                     <SiGithub size={18} />
-                    View Code
+                    {t("projects.modal.viewCode")}
                   </motion.a>
                 )}
               </div>
