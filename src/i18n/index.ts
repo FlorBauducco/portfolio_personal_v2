@@ -4,9 +4,10 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import es from "./locales/es.json";
 import en from "./locales/en.json";
 
-// Keep <html lang> in sync with the active language
+// Keep <html lang> and the page title in sync with the active language
 i18n.on("languageChanged", (lng) => {
   document.documentElement.lang = lng;
+  document.title = i18n.t("meta.title");
 });
 
 i18n

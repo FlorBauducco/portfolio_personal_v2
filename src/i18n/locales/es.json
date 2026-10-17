@@ -175,5 +175,8 @@
       "email": "Email"
     },
     "footer": "Diseñado y desarrollado por Florencia Bauducco · © {{year}}"
+  },
+  "meta": {
+    "title": "Florencia Bauducco · Desarrolladora Full Stack"
   }
 }
