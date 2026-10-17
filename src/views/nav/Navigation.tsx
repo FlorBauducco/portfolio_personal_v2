@@ -30,7 +30,7 @@ export const Navigation = () => {
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end md:justify-center h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between md:justify-center h-16 md:h-20">
           <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-3">
             {navigationData.map((item) => {
               const Icon = item.icon;
@@ -63,24 +63,23 @@ export const Navigation = () => {
                 </motion.button>
               );
             })}
-            <span className="mx-1 h-6 w-px bg-white/10" aria-hidden="true" />
-            <CustomLanguageSwitcher />
           </div>
 
-          {/* Mobile: language switcher + menu button */}
-          <div className="flex items-center gap-3 md:hidden">
-            <CustomLanguageSwitcher />
-            <motion.button
-              className="text-white"
-              onClick={() => setOpen((v) => !v)}
-              aria-expanded={open}
-              aria-controls="mobile-menu"
-              aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Menu size={24} />
-            </motion.button>
-          </div>
+          {/* Desktop language switcher: next to the pill on md, pinned to the right edge from lg */}
+          <CustomLanguageSwitcher className="hidden md:block md:ml-3 lg:absolute lg:right-8 lg:top-1/2 lg:ml-0 lg:-translate-y-1/2 rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm" />
+
+          {/* Mobile: menu button on the left, language switcher on the right */}
+          <motion.button
+            className="text-white md:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Menu size={24} />
+          </motion.button>
+          <CustomLanguageSwitcher className="md:hidden" />
         </div>
 
         {/* Mobile Navigation */}
