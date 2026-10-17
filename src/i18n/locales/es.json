@@ -35,5 +35,18 @@
     "contact": "Contacto",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
+  },
+  "common": {
+    "openToWork": "Disponible para trabajar",
+    "location": "Madrid, España",
+    "present": "Actualidad"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "tagline": "<highlight>Desarrolladora Full Stack</highlight> Junior apasionada por la tecnología, el aprendizaje continuo y la creación de experiencias digitales con sentido.",
+    "viewProjects": "Ver proyectos",
+    "contactMe": "Contáctame",
+    "avatarAlt": "Retrato de Florencia Bauducco",
+    "scrollToAbout": "Ir a la sección Sobre mí"
   }
 }

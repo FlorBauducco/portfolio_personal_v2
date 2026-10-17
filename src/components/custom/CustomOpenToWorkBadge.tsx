@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { cn } from "../../utils/utils";
 
 interface OpenToWorkBadgeProps {
@@ -5,6 +6,8 @@ interface OpenToWorkBadgeProps {
 }
 
 export function CustomOpenToWorkBadge({ className }: OpenToWorkBadgeProps) {
+  const { t } = useTranslation();
+
   return (
     <span
       className={cn(
@@ -16,7 +19,7 @@ export function CustomOpenToWorkBadge({ className }: OpenToWorkBadgeProps) {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
       </span>
-      Open to Work
+      {t("common.openToWork")}
     </span>
   );
 }

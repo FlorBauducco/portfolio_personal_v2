@@ -35,5 +35,18 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
+  },
+  "common": {
+    "openToWork": "Open to Work",
+    "location": "Madrid, Spain",
+    "present": "Present"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "tagline": "Junior <highlight>Full Stack Developer</highlight> passionate about technology, continuous learning, and creating meaningful digital experiences.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "avatarAlt": "Portrait of Florencia Bauducco",
+    "scrollToAbout": "Scroll to about section"
   }
 }
