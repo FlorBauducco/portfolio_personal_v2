@@ -164,5 +164,16 @@
         "description": "Formación en React y TypeScript basada en proyectos reales: gestión de estado, autenticación, testing y desarrollo full stack con Node.js, Express y bases de datos."
       }
     }
+  },
+  "contact": {
+    "title": "Lista para construir y aprender",
+    "description": "Busco mi próximo puesto como Desarrolladora Full Stack Junior. Si crees que encajaría en tu equipo, me encantaría hablar contigo.",
+    "downloadCv": "Descargar CV",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    },
+    "footer": "Diseñado y desarrollado por Florencia Bauducco · © {{year}}"
   }
 }

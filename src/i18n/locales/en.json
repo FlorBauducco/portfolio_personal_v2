@@ -164,5 +164,16 @@
         "description": "Training in React and TypeScript focused on real-world projects, including state management, authentication, testing, and full stack development with Node.js, Express, and databases."
       }
     }
+  },
+  "contact": {
+    "title": "Ready to Build and Learn",
+    "description": "I'm looking for my next role as a Junior Full Stack Developer. If you think I'd be a good fit, I'd love to talk with you.",
+    "downloadCv": "Download CV",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    },
+    "footer": "Designed & built by Florencia Bauducco · © {{year}}"
   }
 }
