@@ -48,5 +48,38 @@
     "contactMe": "Contáctame",
     "avatarAlt": "Retrato de Florencia Bauducco",
     "scrollToAbout": "Ir a la sección Sobre mí"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Un poco sobre mí",
+    "description": "Me importa hacer bien mi trabajo, las personas con las que lo hago y crear cosas con impacto real.",
+    "cards": {
+      "who": {
+        "title": "Quién soy",
+        "body": "Soy Florencia, Desarrolladora Full Stack Junior en Madrid. Di el salto a la tecnología al descubrir cuánto me gusta convertir las ideas en cosas que la gente pueda usar de verdad."
+      },
+      "passion": {
+        "title": "Mi pasión por la tecnología",
+        "body": "Disfruto de cada parte del proceso: código limpio, una UX cuidada y los pequeños detalles que hacen que un producto funcione bien."
+      },
+      "learning": {
+        "title": "Aprendiendo ahora",
+        "body": "Profundizando en diseño de sistemas, testing y cómo crear apps potentes en la era de la IA. Siempre saliendo de mi zona de confort."
+      },
+      "goals": {
+        "title": "Objetivos profesionales",
+        "body": "Unirme a un equipo donde pueda crecer como profesional y crear productos que importen."
+      },
+      "philosophy": {
+        "title": "Filosofía de trabajo",
+        "body": "Comunicar pronto, escribir código que otros puedan leer y tomar el feedback como un regalo. La constancia gana a la intensidad."
+      },
+      "fun": {
+        "title": "Lejos del teclado",
+        "body": "Escalada en bloque, mate argentino de especialidad y demasiados proyectos personales a medio terminar."
+      }
+    },
+    "basedIn": "Ubicada en",
+    "mapAlt": "Mapa de Madrid"
   }
 }

@@ -48,5 +48,38 @@
     "contactMe": "Contact Me",
     "avatarAlt": "Portrait of Florencia Bauducco",
     "scrollToAbout": "Scroll to about section"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A bit about me",
+    "description": "I care about doing my work well, the people I do it with, and building things with real impact.",
+    "cards": {
+      "who": {
+        "title": "Who I am",
+        "body": "I'm Florencia, a Junior Full Stack Developer based in Madrid. I made the leap into tech after discovering how much I love turning ideas into things people can actually use."
+      },
+      "passion": {
+        "title": "My passion for tech",
+        "body": "I enjoy every part of the process: clean code, thoughtful UX, and the small details that make a product feel right."
+      },
+      "learning": {
+        "title": "Currently learning",
+        "body": "Diving deeper into system design, testing, and how to build powerful apps in the AI era. Always stepping out of my comfort zone."
+      },
+      "goals": {
+        "title": "Professional goals",
+        "body": "To join a team where I can grow as a professional and build products that matter."
+      },
+      "philosophy": {
+        "title": "Work philosophy",
+        "body": "Communicate early, write code others can read, and treat feedback as a gift. Consistency beats intensity."
+      },
+      "fun": {
+        "title": "Off the keyboard",
+        "body": "Bouldering, specialty argentinian mate, and far too many half-finished side projects."
+      }
+    },
+    "basedIn": "Based in",
+    "mapAlt": "Madrid map"
   }
 }
