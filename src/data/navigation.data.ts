@@ -11,16 +11,15 @@ import {
 
 export interface NavigationItem {
   id: string;
-  label: string;
   icon: LucideIcon;
 }
 
 export const navigationData: NavigationItem[] = [
-  { id: "home", label: "Home", icon: Home },
-  { id: "about", label: "About", icon: User },
-  { id: "skills", label: "Skills", icon: Zap },
-  { id: "projects", label: "Projects", icon: Briefcase },
-  { id: "experience", label: "Experience", icon: Award },
-  { id: "education", label: "Education", icon: BookOpen },
-  { id: "contact", label: "Contact", icon: Mail },
+  { id: "home", icon: Home },
+  { id: "about", icon: User },
+  { id: "skills", icon: Zap },
+  { id: "projects", icon: Briefcase },
+  { id: "experience", icon: Award },
+  { id: "education", icon: BookOpen },
+  { id: "contact", icon: Mail },
 ];

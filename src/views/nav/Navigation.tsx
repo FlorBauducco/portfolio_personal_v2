@@ -4,6 +4,7 @@ import { navigationData } from "../../data/navigation.data";
 import { useScroll } from "../../hooks/useScroll";
 import { useHideOnScroll } from "../../hooks/useHideOnScroll";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { scrollToSection } from "../../utils/utils";
 import { CustomLanguageSwitcher } from "../../components/custom/CustomLanguageSwitcher";
 
@@ -11,6 +12,7 @@ const ids = navigationData.map((n) => n.id);
 
 export const Navigation = () => {
   const active = useScroll(ids);
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   // Keep the nav visible while the mobile menu is open
   const hidden = useHideOnScroll() && !open;
@@ -43,7 +45,7 @@ export const Navigation = () => {
                   }`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  title={item.label}
+                  title={t(`nav.${item.id}`)}
                 >
                   {isActive && (
                     <motion.div
@@ -57,7 +59,7 @@ export const Navigation = () => {
                     />
                   )}
                   <Icon width={20} height={20} className="relative z-10" />
-                  <span className="text-xs ">{item.label}</span>
+                  <span className="text-xs ">{t(`nav.${item.id}`)}</span>
                 </motion.button>
               );
             })}
@@ -73,7 +75,7 @@ export const Navigation = () => {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              aria-label={open ? "Close menu" : "Open menu"}
+              aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
               whileTap={{ scale: 0.95 }}
             >
               <Menu size={24} />
@@ -109,7 +111,7 @@ export const Navigation = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <Icon width={18} height={18} />
-                      {item.label}
+                      {t(`nav.${item.id}`)}
                     </motion.button>
                   );
                 })}
