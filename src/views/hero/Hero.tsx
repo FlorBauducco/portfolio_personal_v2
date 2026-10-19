@@ -1,9 +1,12 @@
 import { FolderGit2, Mail, MapPin, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { CustomAnimatedButton } from "../../components/custom/CustomAnimatedButton";
+import { Trans, useTranslation } from "react-i18next";
+import { CustomOpenToWorkBadge } from "../../components/custom/CustomOpenToWorkBadge";
 import { scrollToSection } from "../../utils/utils";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="home"
@@ -19,13 +22,19 @@ export const Hero = () => {
         <div className="relative h-28 w-28 overflow-hidden rounded-full border border-border glow-violet sm:h-42 sm:w-42 ">
           <img
             src="/avatar5.png"
-            alt="Portrait of Florencia Bauducco"
+            alt={t("hero.avatarAlt")}
             className="object-cover"
           />
         </div>
       </motion.div>
 
-      <CustomAnimatedButton />
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <CustomOpenToWorkBadge />
+      </motion.div>
 
       <motion.p
         initial={{ opacity: 0, y: 12 }}
@@ -33,7 +42,7 @@ export const Hero = () => {
         transition={{ duration: 0.5, delay: 0.18 }}
         className="mt-6 font-mono text-sm uppercase tracking-[0.25em] text-muted-foreground"
       >
-        Hi, I&apos;m
+        {t("hero.greeting")}
       </motion.p>
 
       <motion.h1
@@ -51,12 +60,12 @@ export const Hero = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl"
       >
-        Junior{" "}
-        <span className="font-semibold text-foreground">
-          Fullstack Developer
-        </span>{" "}
-        passionate about technology, continuous learning, and creating
-        meaningful digital experiences.
+        <Trans
+          i18nKey="hero.tagline"
+          components={{
+            highlight: <span className="font-semibold text-foreground" />,
+          }}
+        />
       </motion.p>
 
       <motion.div
@@ -71,7 +80,7 @@ export const Hero = () => {
           className="cursor-pointer group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] glow-violet"
         >
           <FolderGit2 className="h-4 w-4" />
-          View Projects
+          {t("hero.viewProjects")}
         </button>
         <button
           type="button"
@@ -79,7 +88,7 @@ export const Hero = () => {
           className="cursor-pointer inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
         >
           <Mail className="h-4 w-4" />
-          Contact Me
+          {t("hero.contactMe")}
         </button>
       </motion.div>
 
@@ -90,13 +99,13 @@ export const Hero = () => {
         className="mt-8 flex items-center gap-1.5 text-sm text-muted-foreground"
       >
         <MapPin className="h-4 w-4" />
-        Madrid, Spain
+        {t("common.location")}
       </motion.div>
 
       <motion.button
         type="button"
         onClick={() => scrollToSection("about")}
-        aria-label="Scroll to about section"
+        aria-label={t("hero.scrollToAbout")}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
         transition={{

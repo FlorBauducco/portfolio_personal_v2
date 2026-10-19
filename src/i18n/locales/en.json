@@ -1,0 +1,182 @@
+{
+  "language": {
+    "switch": "Switch language to Spanish"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Tools & technologies",
+    "description": "The stack I reach for, the environment I work in, and the apps that keep my days running.",
+    "categories": {
+      "dev-env": {
+        "title": "Development Environment",
+        "subtitle": "Where the work happens"
+      },
+      "cli": {
+        "title": "CLI",
+        "subtitle": "Keyboard first"
+      },
+      "stack": {
+        "title": "Tech Stack",
+        "subtitle": "Frontend · Backend · Database"
+      },
+      "daily": {
+        "title": "Daily Apps",
+        "subtitle": "Collaboration & flow"
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "openToWork": "Open to Work",
+    "location": "Madrid, Spain",
+    "present": "Present"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "tagline": "Junior <highlight>Full Stack Developer</highlight> passionate about technology, continuous learning, and creating meaningful digital experiences.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "avatarAlt": "Portrait of Florencia Bauducco",
+    "scrollToAbout": "Scroll to about section"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A bit about me",
+    "description": "I care about doing my work well, the people I do it with, and building things with real impact.",
+    "cards": {
+      "who": {
+        "title": "Who I am",
+        "body": "I'm Florencia, a Junior Full Stack Developer based in Madrid. I made the leap into tech after discovering how much I love turning ideas into things people can actually use."
+      },
+      "passion": {
+        "title": "My passion for tech",
+        "body": "I enjoy every part of the process: clean code, thoughtful UX, and the small details that make a product feel right."
+      },
+      "learning": {
+        "title": "Currently learning",
+        "body": "Diving deeper into system design, testing, and how to build powerful apps in the AI era. Always stepping out of my comfort zone."
+      },
+      "goals": {
+        "title": "Professional goals",
+        "body": "To join a team where I can grow as a professional and build products that matter."
+      },
+      "philosophy": {
+        "title": "Work philosophy",
+        "body": "Communicate early, write code others can read, and treat feedback as a gift. Consistency beats intensity."
+      },
+      "fun": {
+        "title": "Off the keyboard",
+        "body": "Working out, reading a good book and specialty Argentinian mate, and always with an idea in mind for my next side project."
+      }
+    },
+    "basedIn": "Based in",
+    "mapAlt": "Madrid map"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "A few of my projects",
+    "description": "A selection of professional and training projects.",
+    "viewDetails": "View details",
+    "openDetails": "Open details for {{title}}",
+    "previewAlt": "{{title}} preview",
+    "modal": {
+      "technologies_one": "{{count}} Technology",
+      "technologies_other": "{{count}} Technologies",
+      "technologiesTitle": "Technologies",
+      "challenges": "Challenges",
+      "solutions": "Solutions",
+      "learnings": "Learnings",
+      "viewProject": "View Project",
+      "viewCode": "View Code"
+    },
+    "items": {
+      "visitas-virtuales": {
+        "summary": "Virtual tour platform for educational centers, built as a Full Stack Developer at Master D.",
+        "description": "A web platform that lets educational centers offer interactive virtual tours of their facilities. I worked on the React and TypeScript frontend, the integration between Unity (C#) and the web, and a Points of Interest (POI) editor in Unity used to configure the virtual environments. Built in a remote team using GitHub, Jira and agile methodology.",
+        "challenges": [
+          "Connecting a Unity (C#) application with a React web frontend.",
+          "Making virtual environments easy to configure without editing Unity code.",
+          "Coordinating work and code within a remote team."
+        ],
+        "solutions": [
+          "Built the communication between Unity and the web so both stay in sync.",
+          "Developed a Points of Interest (POI) editor in Unity to configure each virtual environment.",
+          "Organized tasks in Jira and code in GitHub, following an agile methodology."
+        ],
+        "learnings": [
+          "Integrating a game engine with a modern web application.",
+          "Building internal tools that make content easier to manage.",
+          "Working effectively in a remote agile team."
+        ]
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "My journey",
+    "description": "My path into tech hasn't been linear, but every step has helped me grow. I've built the resilience, collaboration, and analytical mindset that drive me to be a better developer today.",
+    "items": {
+      "freelance": {
+        "role": "Freelance Developer",
+        "description": "Designing and building custom websites for small businesses and independent clients."
+      },
+      "master-d": {
+        "role": "Full Stack Developer",
+        "description": "Developed a virtual tour platform for educational centers with React, TypeScript and Unity (C#), with agile methodologies and teamwork."
+      },
+      "apex-america": {
+        "role": "Technical Support Specialist, FTTH & mobile",
+        "description": "Diagnosed and resolved network, mobile and FTTH connectivity issues, managing incidents through Jira and Remedy."
+      }
+    }
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Always learning",
+    "description": "Formal studies in software development combined with continuous learning in modern web technologies.",
+    "types": {
+      "degree": "Degree",
+      "bootcamp": "Bootcamp",
+      "course": "Course",
+      "certification": "Certification"
+    },
+    "items": {
+      "davante-dam": {
+        "title": "Higher Degree in Multiplatform Application Development (DAM)",
+        "description": "Comprehensive training in multiplatform software development, including Java, Spring Boot, databases, and web development."
+      },
+      "udemy-fullstack": {
+        "title": "Full Stack Web Development Course",
+        "description": "Training focused on full stack web development for real-world environments, including projects integrating frontend, backend, relational databases, and online payment systems."
+      },
+      "udemy-react-typescript": {
+        "title": "React, TypeScript & Next JS",
+        "description": "Training in React and TypeScript focused on real-world projects, including state management, authentication, testing, and full stack development with Node.js, Express, and databases."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's talk",
+    "description": "I'm looking for my next role as a Junior Full Stack Developer. If you think I'd be a good fit for your team, I'd love to hear more.",
+    "downloadCv": "Download CV",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    },
+    "footer": "Designed & built by Florencia Bauducco · © {{year}}"
+  },
+  "meta": {
+    "title": "Florencia Bauducco · Full Stack Developer"
+  }
+}

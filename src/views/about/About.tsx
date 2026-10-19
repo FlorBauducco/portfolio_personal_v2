@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   CustomSection,
   CustomSectionHeading,
@@ -8,12 +9,14 @@ import { cn } from "../../utils/utils";
 import { accentIcon, accentRing } from "../../utils/lib/Index";
 
 export const About = () => {
+  const { t } = useTranslation();
+
   return (
     <CustomSection id="about">
       <CustomSectionHeading
-        eyebrow="About"
-        title="A bit about me"
-        description="I care about the craft, the people I build with, and shipping things that feel considered. Here's the short version."
+        eyebrow={t("about.eyebrow")}
+        title={t("about.title")}
+        description={t("about.description")}
       />
 
       <div className="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -45,17 +48,17 @@ export const About = () => {
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold tracking-tight">
-                {card.title}
+                {t(`about.cards.${card.id}.title`)}
               </h3>
               <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
-                {card.body}
+                {t(`about.cards.${card.id}.body`)}
               </p>
 
               {card.id === "who" && (
                 <div className="relative mt-auto overflow-hidden rounded-xl min-h-80">
                   <img
                     src="/image/mundi.png"
-                    alt="Madrid map"
+                    alt={t("about.mapAlt")}
                     className="absolute inset-0 h-full w-full object-cover opacity-20"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
@@ -64,10 +67,10 @@ export const About = () => {
 
                   <div className="absolute bottom-5 left-5 z-10">
                     <p className="text-xs font-medium uppercase tracking-widest text-violet-400">
-                      Based in
+                      {t("about.basedIn")}
                     </p>
                     <h4 className="text-lg font-bold tracking-tight text-white">
-                      Madrid, Spain
+                      {t("common.location")}
                     </h4>
                     <p className="text-xs text-white/60">
                       40.4168° N · 3.7038° W · UTC+2

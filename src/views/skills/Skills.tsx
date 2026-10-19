@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   CustomSection,
   CustomSectionHeading,
@@ -8,12 +9,14 @@ import { skillCategories } from "../../data/skills.data";
 import { accentIcon } from "../../utils/lib/Index";
 
 export function Skills() {
+  const { t } = useTranslation();
+
   return (
     <CustomSection id="skills">
       <CustomSectionHeading
-        eyebrow="Skills"
-        title="Tools & technologies"
-        description="The stack I reach for, the environment I work in, and the apps that keep my days running."
+        eyebrow={t("skills.eyebrow")}
+        title={t("skills.title")}
+        description={t("skills.description")}
       />
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -46,10 +49,10 @@ export function Skills() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold tracking-tight">
-                    {cat.title}
+                    {t(`skills.categories.${cat.id}.title`)}
                   </h3>
                   <p className="text-xs text-muted-foreground">
-                    {cat.subtitle}
+                    {t(`skills.categories.${cat.id}.subtitle`)}
                   </p>
                 </div>
               </div>

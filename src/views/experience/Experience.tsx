@@ -1,17 +1,22 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   CustomSection,
   CustomSectionHeading,
 } from "../../components/custom/CustomSection";
 import { experience } from "../../data/experience.data";
+import { CustomTechChip } from "../../components/custom/CustomTechChip";
+import { formatPeriod } from "../../utils/utils";
 
 export function Experience() {
+  const { t } = useTranslation();
+
   return (
     <CustomSection id="experience">
       <CustomSectionHeading
-        eyebrow="Experience"
-        title="Building the Foundations"
-        description="My path into tech hasn't been linear, but every step has helped me grow. From technical support to customer-facing roles and software development, I've built the resilience, collaboration, and analytical mindset that drive me as a developer."
+        eyebrow={t("experience.eyebrow")}
+        title={t("experience.title")}
+        description={t("experience.description")}
       />
 
       <ol className="relative ml-3 border-l border-border">
@@ -32,34 +37,21 @@ export function Experience() {
             <div className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-violet/30">
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h3 className="text-lg font-semibold tracking-tight">
-                  {item.role}
+                  {t(`experience.items.${item.id}.role`)}
                 </h3>
                 <span className="font-mono text-xs text-muted-foreground">
-                  {item.period}
+                  {formatPeriod(item.start, item.end, t("common.present"))}
                 </span>
               </div>
               <p className="mt-0.5 text-sm font-medium text-violet">
                 {item.company}
               </p>
-              <ul className="mt-3 space-y-1.5">
-                {item.achievements.map((a) => (
-                  <li
-                    key={a}
-                    className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
-                  >
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground" />
-                    {a}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t(`experience.items.${item.id}.description`)}
+              </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {item.tech?.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-md border border-border bg-secondary/50 px-2 py-0.5 text-xs text-muted-foreground"
-                  >
-                    {t}
-                  </span>
+                {item.tech?.map((tech) => (
+                  <CustomTechChip key={tech} name={tech} />
                 ))}
               </div>
             </div>

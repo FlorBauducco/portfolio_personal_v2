@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, X } from "lucide-react";
 import { SiGithub } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 import type { Project } from "../../data/project.data";
 
 interface ProjectModalProps {
@@ -9,6 +10,13 @@ interface ProjectModalProps {
 }
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
+  const { t } = useTranslation();
+  // Translated list (challenges / solutions / learnings) for the open project
+  const list = (field: string) =>
+    t(`projects.items.${project?.id}.${field}`, {
+      returnObjects: true,
+    }) as string[];
+
   return (
     <AnimatePresence>
       {project && (
@@ -51,18 +59,18 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <span className="text-sm">{project.year}</span>
                   <div className="w-1 h-1 rounded-full bg-gray-600" />
                   <p className="text-sm">
-                    {project.tech.length} Technologies
+                    {t("projects.modal.technologies", { count: project.tech.length })}
                   </p>
                 </div>
               </div>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                {project.description}
+                {t(`projects.items.${project.id}.description`)}
               </p>
 
               <div>
                 <h3 className="text-white font-semibold mb-3">
-                  Technologies
+                  {t("projects.modal.technologiesTitle")}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
@@ -78,10 +86,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               <div>
                 <h3 className="text-white font-semibold mb-3">
-                  Challenges
+                  {t("projects.modal.challenges")}
                 </h3>
                 <ul className="space-y-2">
-                  {project.challenges.map((challenge, idx) => (
+                  {list("challenges").map((challenge, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -94,9 +102,11 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-3">Solutions</h3>
+                <h3 className="text-white font-semibold mb-3">
+                  {t("projects.modal.solutions")}
+                </h3>
                 <ul className="space-y-2">
-                  {project.solutions.map((solution, idx) => (
+                  {list("solutions").map((solution, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -109,9 +119,11 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div>
-                <h3 className="text-white font-semibold mb-3">Learnings</h3>
+                <h3 className="text-white font-semibold mb-3">
+                  {t("projects.modal.learnings")}
+                </h3>
                 <ul className="space-y-2">
-                  {project.learnings.map((learnings, idx) => (
+                  {list("learnings").map((learnings, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-3 text-gray-300"
@@ -124,28 +136,32 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
-                <motion.a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-3 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-indigo-500/50 transition-all"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <ExternalLink size={18} />
-                  View Project
-                </motion.a>
-                <motion.a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-3 rounded-lg border border-gray-400 text-white font-medium flex items-center justify-center gap-2 hover:border-gray-300 hover:bg-white/5 transition-all"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <SiGithub size={18} />
-                  View Code
-                </motion.a>
+                {project.liveUrl && (
+                  <motion.a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-3 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-indigo-500/50 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <ExternalLink size={18} />
+                    {t("projects.modal.viewProject")}
+                  </motion.a>
+                )}
+                {project.codeUrl && (
+                  <motion.a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 text-white font-medium flex items-center justify-center gap-2 hover:border-gray-300 hover:bg-white/5 transition-all"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <SiGithub size={18} />
+                    {t("projects.modal.viewCode")}
+                  </motion.a>
+                )}
               </div>
             </div>
           </motion.div>

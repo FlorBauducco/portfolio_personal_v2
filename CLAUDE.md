@@ -14,6 +14,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Trabaja siempre en una rama, nunca directamente en main.
 - Al terminar cada cambio, ejecuta `pnpm lint` y `pnpm build`
   para comprobar que no hay errores.
+- Traducciones al español: mantener en inglés los términos técnicos
+  que se usan así en el sector (stack, frontend, backend, CLI,
+  nombres de herramientas). Traducir frases, descripciones y
+  títulos generales.
+- En los textos en español no usar la palabra "oficio"; usar
+  expresiones más naturales ("mi trabajo", "el proceso",
+  "el desarrollo").
 
 ## Objetivo del proyecto
 
@@ -54,7 +61,7 @@ Reusable primitives live in `src/components/custom/`:
 
 - `CustomSection` — standard section wrapper (padding, id anchor for nav scrolling).
 - `CustomReveal` — scroll-triggered reveal animation used across sections.
-- `CustomAnimatedButton` — shared button styling/motion.
+- `CustomOpenToWorkBadge` — "Open to Work" badge used in Hero and Contact.
 - `CustomDynamicBackground` — the app-wide background layer.
 
 Hooks in `src/hooks/`:
